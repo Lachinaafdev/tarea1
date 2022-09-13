@@ -1,0 +1,441 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+
+
+.grid-container>* {
+    padding: 10px;
+    text-align: center;
+}
+
+header {
+    grid-area: header;
+
+    display: grid;
+    gap: 2px;
+    grid-template:
+        "header1 " 40%
+        "header2" auto
+    ;
+}
+
+.header1 {
+    grid-area: header1;
+    display: grid;
+
+    grid-template-columns: 70% 30%;
+
+}
+
+.buttonSearch {
+    background-color: rgb(37, 82, 0);
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 10px;
+    margin: 2px 0px;
+    padding: 10px 0px;
+    text-align: center;
+    width: 80px;
+}
+
+input {
+    border-radius: 5px;
+    border: 1px solid #39c;
+}
+
+.buttonBusines {
+
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 10px;
+    margin: 2px 0px;
+    padding: 10px 0px;
+    text-align: center;
+    width: 80px;
+}
+
+.header2 {
+    grid-area: header2;
+    display: grid;
+
+    grid-template-columns: 50% 50%;
+}
+
+h1 {
+    text-align: left;
+    padding: 15px 0 0 85px;
+
+}
+
+h2 {
+    text-align: left;
+    padding: 15px 0 0 85px;
+
+}
+
+nav {
+    grid-area: navbar;
+    display: grid;
+    background-color: rgb(187, 187, 187);
+    grid-template-columns: 80% 20%;
+
+
+}
+
+.col1 a {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.col1 ul {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.col1 ul li {
+    margin-left: 30px;
+    list-style: none;
+    padding: 5px;
+}
+
+.col2 {
+    background-color: rgb(252, 248, 255);
+    display: inline-block;
+}
+
+
+
+nav ul li {
+    list-style: none;
+
+    float: left;
+    padding: 10px 35px 10px 35px;
+
+}
+
+nav a {
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+
+
+aside {
+    grid-area: sidebar;
+
+    display: grid;
+    gap: 3px;
+    grid-template:
+        "filtros " 240px
+        "producto" 120px
+        "producto" 120px
+        "producto" 120px
+    ;
+}
+
+
+
+.filtros {
+    grid-area: filtros;
+
+    display: block;
+    text-align: left;
+}
+
+
+.filtros ul li {
+    list-style: none;
+    margin: 10px;
+}
+
+.producto {
+    background-color: black;
+}
+
+article {
+    grid-area: main;
+
+    display: grid;
+    gap: 3px;
+    grid-template:
+        "main1" 2fr
+        "main3" 2fr
+        "main4" 2fr
+    ;
+}
+
+.main1 {
+    grid-area: main1;
+    display: grid;
+
+
+    grid-template:
+        "item1 " 350px
+        "item2"
+        "item3"
+
+        "item4"
+        "item5"
+}
+
+@media(min-width:600px) {
+
+    .main1 {
+        grid-area: main1;
+        display: grid;
+
+
+        grid-template:
+            "item1 item2 item3" 350px
+            "item4 item5 item5" 350px
+            /350px 550px auto;
+
+
+    }
+}
+
+
+.item1 {
+    grid-area: "item1";
+
+    background-image: url(/assets/producto.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+
+}
+
+.item2 {
+    grid-area: "item2";
+    display: grid;
+    padding: 20px;
+    text-align: start;
+
+
+}
+
+.item3 {
+    grid-area: "item3";
+    display: grid;
+
+}
+
+.item4 {
+    grid-area: "item4";
+    display: grid;
+
+    text-align: start;
+    padding: 10px 30px;
+}
+
+
+
+.item5 {
+    grid-area: "item5";
+    display: grid;
+
+
+    padding: 10px 30px;
+    text-align: start;
+}
+
+
+
+.button {
+    background-color: blueviolet;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 1.25em;
+    margin: 10px 0px;
+    padding: 10px 0px 0px 0px;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+
+
+}
+
+
+.button2 {
+    background-color: rgb(150, 131, 127);
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 1.25em;
+
+    padding: 10px 0px;
+    text-align: center;
+    width: 200px;
+    height: 100px;
+
+}
+
+.main2 {
+    grid-area: main2;
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+}
+
+
+
+
+
+.main3 {
+
+    grid-area: main3;
+
+
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid rgb(255, 170, 12);
+}
+
+
+th,
+td {
+    padding: 10px;
+}
+
+thead {
+    display: inline-block;
+    text-align: center;
+    padding-left: 300px;
+
+}
+
+.main4 {
+    grid-area: main4;
+    display: flex;
+    flex-direction: col;
+    flex-wrap: wrap;
+    background-color: rgb(199, 8, 81);
+}
+
+
+.i1 {
+
+    flex: 1;
+
+    background-image: url(/assets/producto.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+
+
+
+
+}
+
+.i2 {
+    flex: 1;
+
+    background-image: url(/assets/producto.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+
+
+
+}
+
+
+
+
+.i3 {
+
+    flex: 1;
+    background-image: url(/assets/producto.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+
+
+
+}
+
+.i4 {
+
+    flex: 1;
+    background-image: url(/assets/producto.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+
+
+}
+
+.i5 {
+    flex: 1;
+    background-image: url(/assets/producto.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+
+
+
+}
+
+
+
+.grid-container {
+    display: grid;
+    gap: 0px;
+
+    grid-template:
+        "header" 100px
+        "navbar" 50px
+        "main" 4350px
+        "sidebar" auto
+    ;
+}
+
+@media(min-width:600px) {
+    .grid-container {
+        /* 
+       grid-template-columns: 200px auto;
+        grid-template-rows: 100px 50px auto 100px;
+        grid-template-areas:
+            "header header"
+            "navbar navbar"
+            "sidebar main"
+            "footer footer"
+           
+        ; */
+
+        grid-template:
+            "header header" 110px
+            "navbar navbar" 50px
+            "sidebar main" 1350px /
+            260px auto
+        ;
+    }
+
+}
