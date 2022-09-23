@@ -29,7 +29,11 @@ document.getElementById("botonsearch").addEventListener("click ", ocultar_buscad
  function mostrat_buscador(){
   botonsearch.style.display = "block";
   inputsearch.style.display = "block";
+  //focus detecta el eventp centradp
   inputsearch.focus();
+  //on change cuando escribe lo evalua en tiempo real 
+  //blur el evento ya no esta parpadeando 
+  
     
  }
 //buscador
@@ -49,7 +53,7 @@ document.getElementById("inputsearch").addEventListener("keyup",buscador_interno
     if(textValue.toUpperCase().indexOf(filter)> -1){
 li[1].style.display=""
  }
- 
+
 
 
  

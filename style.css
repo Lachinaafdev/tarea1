@@ -1,3 +1,4 @@
+/*********Estilos Generales*********/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,6 +8,66 @@
     text-decoration: none;
 
 }
+
+html {
+    height: 100vh;
+}
+
+body {
+    min-height: 100%;
+}
+
+/******************Estilos Header******************/
+
+header {
+    grid-area: header;
+
+    display: grid;
+    gap: 2px;
+    grid-template:
+        "header1 " 40%
+        "header2" auto
+    ;
+}
+
+/**********Header1-barra**********/
+
+
+/*Header1-barra*/
+.header1 {
+    grid-area: header1;
+    display: grid;
+
+    grid-template-columns: 70% 30%;
+
+}
+
+.col1 a {
+    font-size: 15px;
+    font-weight: bold;
+    color: #39c;
+}
+
+.col1 ul {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.col1 ul li {
+    margin-left: 30px;
+    list-style: none;
+    padding: 5px;
+}
+
+.col2 {
+    background-color: rgb(151, 80, 206);
+    display: inline-block;
+}
+
+/*Header1-barra*/
+
+/*barra de busqueda*/
 
 #box-search {
     position: fixed;
@@ -29,40 +90,6 @@
     cursor: pointer;
 }
 
-html {
-    height: 100vh;
-}
-
-body {
-    min-height: 100%;
-}
-
-
-
-.grid-container>* {
-    padding: 10px;
-    text-align: center;
-}
-
-header {
-    grid-area: header;
-
-    display: grid;
-    gap: 2px;
-    grid-template:
-        "header1 " 40%
-        "header2" auto
-    ;
-}
-
-.header1 {
-    grid-area: header1;
-    display: grid;
-
-    grid-template-columns: 70% 30%;
-
-}
-
 .buttonSearch {
     background-color: rgb(37, 82, 0);
     color: rgb(255, 255, 255);
@@ -76,12 +103,15 @@ header {
 
 input {
     border-radius: 5px;
-    border: 1px solid #39c;
+    border: 1px solid rgb(77, 80, 82);
 }
 
+/*barra de busqueda*/
+
+/*Botones*/
 .buttonBusines {
 
-    color: rgb(255, 255, 255);
+    color: rgb(176, 35, 35);
     display: inline-block;
     font-size: 10px;
     margin: 2px 0px;
@@ -90,6 +120,14 @@ input {
     width: 80px;
 }
 
+/*Botones*/
+
+
+
+/**********Header1-barra**********/
+
+/**********Header2-barra**********/
+
 .header2 {
     grid-area: header2;
     display: grid;
@@ -97,10 +135,12 @@ input {
     grid-template-columns: 50% 50%;
 }
 
+/**********Header2-barra**********/
+
+
 h1 {
     text-align: left;
     padding: 15px 0 0 85px;
-
 }
 
 h2 {
@@ -118,27 +158,8 @@ nav {
 
 }
 
-.col1 a {
-    font-size: 15px;
-    font-weight: bold;
-}
 
-.col1 ul {
-    display: flex;
-    justify-content: flex-end;
 
-}
-
-.col1 ul li {
-    margin-left: 30px;
-    list-style: none;
-    padding: 5px;
-}
-
-.col2 {
-    background-color: rgb(252, 248, 255);
-    display: inline-block;
-}
 
 
 
@@ -156,7 +177,7 @@ nav a {
 
 }
 
-
+/*Estilos Sidebar*/
 
 aside {
     grid-area: sidebar;
@@ -190,241 +211,129 @@ aside {
     background-color: black;
 }
 
-article {
+
+/*Estilos mainpage*/
+.main {
+    height: auto;
     grid-area: main;
 
-    display: grid;
-    gap: 3px;
-    grid-template:
-        "main1" 2fr
-        "main3" 2fr
-        "main4" 2fr
-    ;
 }
 
 .main1 {
-    grid-area: main1;
-    display: grid;
 
-
-    grid-template:
-        "item1 " 350px
-        "item2"
-        "item3"
-
-        "item4"
-        "item5"
-}
-
-@media(min-width:600px) {
-
-    .main1 {
-        grid-area: main1;
-        display: grid;
-
-
-        grid-template:
-            "item1 item2 item3" 350px
-            "item4 item5 item5" 350px
-            /350px 550px auto;
-
-
-    }
-}
-
-
-.item1 {
-    grid-area: "item1";
-
-    background-image: url(/assets/producto.jpg);
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: auto;
-
-}
-
-.item2 {
-    grid-area: "item2";
-    display: grid;
-    padding: 20px;
-    text-align: start;
-
-
-}
-
-.item3 {
-    grid-area: "item3";
-    display: grid;
-
-}
-
-.item4 {
-    grid-area: "item4";
-    display: grid;
-
-    text-align: start;
-    padding: 10px 30px;
-}
-
-
-
-.item5 {
-    grid-area: "item5";
-    display: grid;
-
-
-    padding: 10px 30px;
-    text-align: start;
-}
-
-
-
-.button {
-    background-color: blueviolet;
-    color: rgb(255, 255, 255);
-    display: inline-block;
-    font-size: 1.25em;
-    margin: 10px 0px;
-    padding: 10px 0px 0px 0px;
-    text-align: center;
-    width: 200px;
-    height: 50px;
-
-
-}
-
-
-.button2 {
-    background-color: rgb(150, 131, 127);
-    color: rgb(255, 255, 255);
-    display: inline-block;
-    font-size: 1.25em;
-
-    padding: 10px 0px;
-    text-align: center;
-    width: 200px;
-    height: 100px;
-
-}
-
-.main2 {
-    grid-area: main2;
-    display: grid;
-
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-
-}
-
-
-
-
-
-.main3 {
-
-    grid-area: main3;
-
-
-}
-
-table {
-    table-layout: fixed;
-    width: 100%;
-    border-collapse: collapse;
-    border: 3px solid rgb(255, 170, 12);
-}
-
-
-th,
-td {
-    padding: 10px;
-}
-
-thead {
-    display: inline-block;
-    text-align: center;
-    padding-left: 300px;
-
-}
-
-.main4 {
-    grid-area: main4;
     display: flex;
-    flex-direction: col;
     flex-wrap: wrap;
-    background-color: rgb(199, 8, 81);
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.img {
+    width: 70%;
+
+    margin-left: 15%;
+    grid-column: 1 / 2;
+    grid-row: 1/ 3;
+    background-image: url(assets/img0.jpg);
+    background-size: contain;
+
+}
+
+.catproducto {
+    grid-column: 1 / 2;
+    grid-row: 3/ 4;
+    background-color: rgb(188, 138, 58);
+
 }
 
 
-.i1 {
+.desproducto {
+    height: auto;
+    grid-column: 1 / 2;
+    grid-row: 4/5;
+    background-color: aqua;
+}
 
-    flex: 1;
+.callproducto {
+    grid-column: 1 / 2;
+    grid-row: 5/ 6;
+    background-color: blue;
+}
 
-    background-image: url(/assets/producto.jpg);
-    background-position: center;
-    background-size: cover;
+
+.featproducto {
+    grid-column: 1 / 2;
+    grid-row: 6/8;
+    background-color: rgb(205, 52, 52);
+}
+
+
+/*tabla*/
+.table {
+
+
     width: 100%;
     height: auto;
-
-
-
-
-}
-
-.i2 {
-    flex: 1;
-
-    background-image: url(/assets/producto.jpg);
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: auto;
-
+    border: 1px solid;
+    border-color: rgb(0, 0, 0);
+    border-collapse: collapse;
 
 
 }
 
+.o {
+    background-color: aquamarine;
 
+}
 
+.columgray {
 
-.i3 {
-
-    flex: 1;
-    background-image: url(/assets/producto.jpg);
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: auto;
-
+    background-color: #f2f2f2;
 
 
 }
 
-.i4 {
-
-    flex: 1;
-    background-image: url(/assets/producto.jpg);
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: auto;
-
-
-}
-
-.i5 {
-    flex: 1;
-    background-image: url(/assets/producto.jpg);
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: auto;
-
-
-
+td {
+    padding: 8px;
 }
 
 
+
+.line {
+    border-right: 1px solid;
+    border-color: rgb(0, 0, 0);
+}
+
+/*tabla*/
+/*productos relacionados*/
+.relatedprod {
+
+    display: flex;
+
+    min-height: 10rem;
+    background-color: black;
+
+}
+
+
+.img1 {
+
+    background-image: url(/assets/img3.jpg);
+
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: calc(100% - 50%);
+}
+
+
+/*productos relacionados*/
+
+
+
+
+
+
+/*Grid Area mediaquery*/
 
 .grid-container {
     display: grid;
@@ -433,12 +342,14 @@ thead {
     grid-template:
         "header" 100px
         "navbar" 50px
-        "main" 4350px
+        "main" auto
         "sidebar" auto
     ;
 }
 
 @media(min-width:600px) {
+
+
     .grid-container {
         /* 
        grid-template-columns: 200px auto;
@@ -452,11 +363,69 @@ thead {
         ; */
 
         grid-template:
-            "header header" 110px
-            "navbar navbar" 50px
-            "sidebar main" 1350px /
+            "header header"
+            "navbar navbar"
+            "sidebar main" auto/
             260px auto
         ;
     }
+
+}
+
+@media(min-width:600px) {
+
+
+
+
+
+
+    .main1 {
+        min-height: 70%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .img {
+
+
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+    }
+
+    .desproducto {
+        grid-column: 3/5;
+        background-color: aqua;
+        grid-row: 1 / 3;
+    }
+
+    .callproducto {
+        grid-column: 5/6;
+        background-color: blue;
+        grid-row: 1 / 3;
+    }
+
+    .catproducto {
+        grid-column: 1/3;
+        grid-row: 3/4;
+
+        background-color: rgb(188, 138, 58);
+    }
+
+
+
+    .featproducto {
+        grid-column: 3/6;
+
+        grid-row: 3/5;
+        background-color: rgb(205, 52, 52);
+    }
+
+    .relatedprod {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    }
+
 
 }
