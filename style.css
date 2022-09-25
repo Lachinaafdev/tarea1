@@ -7,10 +7,13 @@
     outline: none;
     text-decoration: none;
 
+
 }
 
 html {
     height: 100vh;
+    font-family: 'Roboto';
+
 }
 
 body {
@@ -35,37 +38,97 @@ header {
 
 /*Header1-barra*/
 .header1 {
+    padding-top: 10px;
     grid-area: header1;
     display: grid;
-
+    background-color: rgb(228, 222, 222);
     grid-template-columns: 70% 30%;
+    border: 1px rgb(0, 0, 0) solid;
 
 }
 
 .col1 a {
     font-size: 15px;
-    font-weight: bold;
-    color: #39c;
+    font-weight: 500;
+
+
 }
 
 .col1 ul {
     display: flex;
     justify-content: flex-end;
+    padding-right: 2rem;
 
 }
 
 .col1 ul li {
+
     margin-left: 30px;
     list-style: none;
-    padding: 5px;
+
+
 }
 
-.col2 {
-    background-color: rgb(151, 80, 206);
-    display: inline-block;
+.ap {
+    padding-left: 1rem;
 }
 
 /*Header1-barra*/
+
+/*Header2-barra*/
+.col2 {
+
+    display: inline-block;
+}
+
+.hed {
+    font-size: 3rem;
+    font-weight: 500;
+    padding-left: 10rem;
+}
+
+.heder23 {
+    font-size: 2rem;
+    font-weight: 400;
+
+    padding: 1rem;
+}
+
+.submenu {
+    font-size: 1rem;
+    font-weight: 400;
+    list-style: none;
+    display: flex;
+
+    padding: 10px 25px 10px 25px;
+}
+
+/**********Header2-barra**********/
+
+.header2 {
+    grid-area: header2;
+    display: grid;
+
+
+    grid-template-columns: 50% 50%;
+}
+
+nav {
+    grid-area: navbar;
+    display: grid;
+    background-color: rgb(228, 222, 222);
+    grid-template-columns: 80% 20%;
+    border: 1px rgb(0, 0, 0) solid;
+
+}
+
+
+
+
+
+/**********Header2-barra**********/
+
+/*Header2-barra*/
 
 /*barra de busqueda*/
 
@@ -82,13 +145,13 @@ header {
 
 }
 
-#home {
+#home,
+#events,
+#news {
     cursor: pointer;
 }
 
-#events {
-    cursor: pointer;
-}
+
 
 .buttonSearch {
     background-color: rgb(37, 82, 0);
@@ -108,74 +171,12 @@ input {
 
 /*barra de busqueda*/
 
-/*Botones*/
-.buttonBusines {
-
-    color: rgb(176, 35, 35);
-    display: inline-block;
-    font-size: 10px;
-    margin: 2px 0px;
-    padding: 10px 0px;
-    text-align: center;
-    width: 80px;
-}
-
-/*Botones*/
 
 
 
 /**********Header1-barra**********/
 
-/**********Header2-barra**********/
 
-.header2 {
-    grid-area: header2;
-    display: grid;
-
-    grid-template-columns: 50% 50%;
-}
-
-/**********Header2-barra**********/
-
-
-h1 {
-    text-align: left;
-    padding: 15px 0 0 85px;
-}
-
-h2 {
-    text-align: left;
-    padding: 15px 0 0 85px;
-
-}
-
-nav {
-    grid-area: navbar;
-    display: grid;
-    background-color: rgb(187, 187, 187);
-    grid-template-columns: 80% 20%;
-
-
-}
-
-
-
-
-
-
-nav ul li {
-    list-style: none;
-
-    float: left;
-    padding: 10px 35px 10px 35px;
-
-}
-
-nav a {
-    font-size: 18px;
-    font-weight: bold;
-
-}
 
 /*Estilos Sidebar*/
 
@@ -192,7 +193,11 @@ aside {
     ;
 }
 
-
+.fil_text {
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding-top: 1rem;
+}
 
 .filtros {
     grid-area: filtros;
@@ -208,7 +213,9 @@ aside {
 }
 
 .producto {
-    background-color: black;
+    background-color: rgb(228, 222, 222);
+
+    border: 1px rgb(0, 0, 0) solid;
 }
 
 
@@ -220,12 +227,13 @@ aside {
 }
 
 .main1 {
-
+    padding-top: 2rem;
     display: flex;
     flex-wrap: wrap;
 
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
 }
 
 .img {
@@ -234,38 +242,97 @@ aside {
     margin-left: 15%;
     grid-column: 1 / 2;
     grid-row: 1/ 3;
-    background-image: url(assets/img0.jpg);
-    background-size: contain;
+
+
 
 }
+
 
 .catproducto {
     grid-column: 1 / 2;
     grid-row: 3/ 4;
-    background-color: rgb(188, 138, 58);
+    padding-top: 1rem;
+    padding-left: 1rem;
 
 }
 
+.related-tittle {
 
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.link {
+
+    color: black;
+    text-decoration: underline;
+}
+
+/* desproducto */
 .desproducto {
     height: auto;
     grid-column: 1 / 2;
     grid-row: 4/5;
-    background-color: aqua;
+
 }
+
+.tituloprod {
+
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.subprod {
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.loremprod {
+    padding-top: 1rem;
+    font-size: 1rem;
+}
+
+/* desproducto */
+
+/* callproducto */
 
 .callproducto {
     grid-column: 1 / 2;
     grid-row: 5/ 6;
-    background-color: blue;
+
 }
+
+
+.requestbutton {
+    background-color: rgb(228, 222, 222);
+    display: flex;
+
+
+
+    text-align: center;
+    width: 180px;
+    text-decoration: none;
+    color: black;
+
+
+    font-size: 1rem;
+}
+
+
+
+
+
+/* callproducto */
 
 
 .featproducto {
+    padding-left: 3rem;
     grid-column: 1 / 2;
     grid-row: 6/8;
-    background-color: rgb(205, 52, 52);
+
 }
+
 
 
 /*tabla*/
@@ -281,10 +348,7 @@ aside {
 
 }
 
-.o {
-    background-color: aquamarine;
 
-}
 
 .columgray {
 
@@ -309,9 +373,9 @@ td {
 .relatedprod {
 
     display: flex;
-
+    padding-top: 1rem;
     min-height: 10rem;
-    background-color: black;
+
 
 }
 
@@ -395,13 +459,12 @@ td {
 
     .desproducto {
         grid-column: 3/5;
-        background-color: aqua;
         grid-row: 1 / 3;
     }
 
     .callproducto {
         grid-column: 5/6;
-        background-color: blue;
+
         grid-row: 1 / 3;
     }
 
@@ -409,7 +472,6 @@ td {
         grid-column: 1/3;
         grid-row: 3/4;
 
-        background-color: rgb(188, 138, 58);
     }
 
 
@@ -418,7 +480,7 @@ td {
         grid-column: 3/6;
 
         grid-row: 3/5;
-        background-color: rgb(205, 52, 52);
+
     }
 
     .relatedprod {
