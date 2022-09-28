@@ -132,41 +132,28 @@ nav {
 
 /*barra de busqueda*/
 
-#box-search {
-    position: fixed;
-    top: 165px;
-    left: 50%;
-    transform: translate(-50%);
-    width: 120px;
-    background: #39c;
-    z-index: 8;
-    overflow: hidden;
-    display: none;
-
-}
-
-#home,
 #events,
 #news {
     cursor: pointer;
 }
 
+.btn {
+    padding: 1px 5px;
+    border: solid 1px rgb(0, 0, 0);
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(228, 222, 222);
 
-
-.buttonSearch {
-    background-color: rgb(37, 82, 0);
-    color: rgb(255, 255, 255);
-    display: inline-block;
-    font-size: 10px;
-    margin: 2px 0px;
-    padding: 10px 0px;
-    text-align: center;
-    width: 80px;
 }
 
+
+
+
 input {
-    border-radius: 5px;
-    border: 1px solid rgb(77, 80, 82);
+    border-radius: 8px;
+    padding: 2px 5px;
+    border: 1px solid rgb(0, 0, 0);
+
 }
 
 /*barra de busqueda*/
@@ -304,24 +291,42 @@ aside {
 }
 
 
-.requestbutton {
+.requestbutto {
     background-color: rgb(228, 222, 222);
-    display: flex;
-
-
-
+    border-radius: 10px;
     text-align: center;
-    width: 180px;
     text-decoration: none;
     color: black;
-
-
     font-size: 1rem;
+    padding: .7rem 1rem;
+    border: solid 1px rgb(0, 0, 0);
+    cursor: pointer;
+    margin-bottom: 1rem;
+
+}
+
+.btnpricing {
+    border: solid 1px rgb(0, 0, 0);
+    padding: 2rem 1rem;
+    height: auto;
+    background-color: rgb(192, 232, 232);
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+
+
+
+}
+
+.color {
+    color: black;
+
 }
 
 
-
-
+.btnpad {
+    padding-bottom: 2rem;
+}
 
 /* callproducto */
 
@@ -425,6 +430,7 @@ td {
             "footer footer"
            
         ; */
+        margin: 1rem;
 
         grid-template:
             "header header"
